@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registeration
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autofocus class="form-control text-light bg-white f-flex flex-row justify-content-center w-75 border" name="username" placeholder="flname" type="text">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control text-light bg-white f-flex flex-row justify-content-center w-75 border" name="password" placeholder="psw" type="password">
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Confirmation psw text-light bg-white f-flex flex-row justify-content-center w-75 border" type="password">
+        </div>
+
+        <button class="btn btn-loght" type="submit">registration here</button>
+    </form>
+{% endblock %}

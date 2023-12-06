@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    quote page
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+
+        <div class="form-group">
+            <input autocomplete="on" class="form-control" name="symbol" placeholder="sample" type="text">
+        </div>
+
+        <button class="btn btn-light d-flex flex-column" type="submit">test here</button>
+    </form>
+{% endblock %}

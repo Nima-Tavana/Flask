@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell here page
+{% endblock %}
+
+{% block main %}
+    <form class="text-white bg-light text-center d-flex flex-row justify-content-arround" action="/sell" method="post">
+        <div class="form-group">
+            <select class="text-white bg-light text-center d-flex flex-row justify-content-arround" name="symbol">
+                {% for number in symbols %}
+                <option class="text-white bg-light text-center d-flex flex-row justify-content-arround">{{ number["symbol"] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="shares" placeholder="sh" type="number">
+        </div>
+        <button class="btn btn-light text-center d-column" type="submit">sell here please</button>
+    </form>
+{% endblock %}

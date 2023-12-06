@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    history
+{% endblock %}
+
+{% block main %}
+    <table class="table table_striped">
+        <thead class="mx-2 my-2 text-center d-flex flex-row justify-content-center">
+            <tr class="mx-2 my-2 text-center d-flex flex-row justify-content-center">
+                <th class="mx-2 my-2 text-center d-flex flex-row justify-content-center">sample</th>
+                <th class="mx-2 my-2 text-center d-flex flex-row justify-content-center">tpe</th>
+                <th class="mx-2 my-2 text-center d-flex flex-row justify-content-center">sharable</th>
+                <th class="mx-2 my-2 text-center d-flex flex-row justify-content-center">value</th>
+                <th class="mx-2 my-2 text-center d-flex flex-row justify-content-center">timestamp</th>
+            </tr>
+        </thead>
+
+        <tbody class="mx-2 my-2 text-center d-flex flex-row justify-content-center">
+            {% for number in trans %}
+            <tr class="mx-2 my-2 text-center d-flex flex-row justify-content-center">
+                <td class="mx-2 my-2 text-center d-flex flex-row justify-content-center"> {{ number["sample"].upper() }} </td>
+                <td class="mx-2 my-2 text-center d-flex flex-row justify-content-center"> {{ number["tpe"] }} </td>
+                <td class="mx-2 my-2 text-center d-flex flex-row justify-content-center"> {{ number["sharable"] }} </td>
+                <td class="mx-2 my-2 text-center d-flex flex-row justify-content-center"> {{ usd(number["value"]) }} </td>
+                <td class="mx-2 my-2 text-center d-flex flex-row justify-content-center"> {{ number["timestamp"] }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

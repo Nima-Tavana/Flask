@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Loging in page
+{% endblock %}
+
+{% block main %}
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input class="form-control text-center text-white d-flex flex-row bg-dark" name="username" placeholder="" type="text">
+        </div>
+        <div class="form-group d-inline text-white bg-light">
+            <input class="form-control text-white d-flex justify-content-center" name="password" placeholder="test" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log in panel</button>
+    </form>
+{% endblock %}

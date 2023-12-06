@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    main
+{% endblock %}
+
+{% block main %}
+    <table class="table table_striped">
+        <thead class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">
+            <tr class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">
+                <th class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">sample</th>
+                <th class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">nam</th>
+                <th class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">sharable</th>
+                <th class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">value</th>
+                <th class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">amount</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for number in stock %}
+            <tr class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ number["symbol"] }} </td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ number["name"] }} </td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ number["Tshares"] }} </td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ usd(number["price"]) }} </td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ usd(number["Tshares"] * number["price"]) }} </td>
+            </tr>
+            {% endfor %}
+
+            <tr class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">balance</td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"></td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"></td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"></td>
+                <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"> {{ usd(cash) }} </td>
+            </tr>
+        </tbody>
+
+        <tfoot class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between">
+            <td colspan="4"></td>
+            <td class="mx-auto my-3 text-center text-white bg-light d-flex flex-row justify-content-between"><strong> {{ usd(total) }} </strong></td>
+        </tfoot>
+
+    </table>
+
+{% endblock %}

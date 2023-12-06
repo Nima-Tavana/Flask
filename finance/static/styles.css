@@ -1,0 +1,82 @@
+body a {
+    text-decoration: none;
+    color: darkblue;
+    padding: 10px;
+    transition: 0.5s;
+    color: blue;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    font-size: 25px;
+    background-color: rgb(14, 69, 105);
+}
+nav .navbar-brand .blue
+{
+    color: black;
+    color: darkblue;
+    padding: 5px 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+}
+nav .navbar-brand .red
+{
+    color: darkblue;
+    background: transparent;
+    border: none;
+    border-color: transparent;
+    border-radius: 0px;
+    color: #000;
+    border-bottom: 2px solid #ccc;
+    transition: all .8s;
+}
+nav .navbar-brand .green
+{
+    color: darkblue;
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    font-size: 25px;
+    background-color: rgb(14, 69, 105);
+}
+main .form-control
+{
+    display: block;
+    width: 75%;
+    color: darkblue;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+    padding: 30px;
+}
+main
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: darkblue;
+}
+nav .navbar-brand .yellow
+{
+    color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+main img
+{
+    max-width: 75%;
+    color: darkblue;
+    color: #777;
+    display: block;
+    font-size: 13px;
+    margin-top: -70px;
+    margin-right: 4px;
+    transition: all .4s;
+}
+nav .navbar-brand
+{
+    font-size: 30px;
+    color: darkblue;
+    background: transparent;
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #f5593d;
+}
